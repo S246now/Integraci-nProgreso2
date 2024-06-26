@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC4AMtpdqIrFGJvCpH6R_dOmdbTZn72N64",
-  authDomain: "integracion-3bba0.firebaseapp.com",
-  projectId: "integracion-3bba0",
-  storageBucket: "integracion-3bba0.appspot.com",
-  messagingSenderId: "2748154650",
-  appId: "1:2748154650:web:d20483cacfa2b488ae22a3"
+  apiKey: "AIzaSyDWjV1Y8tuXG-pfmn06C32Yabe5fyJe_3A",
+  authDomain: "integracion-d1e60.firebaseapp.com",
+  projectId: "integracion-d1e60",
+  storageBucket: "integracion-d1e60.appspot.com",
+  messagingSenderId: "626594391061",
+  appId: "1:626594391061:web:9879844f5fcb6e57ff5a1c"
 };
 
 

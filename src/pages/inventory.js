@@ -1,15 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { database } from '../firebase';
-import { ref, push } from 'firebase/database';
+import { ref, push, get } from 'firebase/database';
 
 export default function NewProduct() {
-  const [productName, setProductName] = useState('');
+  const [productId, setProductId] = useState('');
   const [stock, setStock] = useState(0);
   const [price, setPrice] = useState(0);
-
+  
   const handleAddProduct = async () => {
     const productRef = ref(database, 'products');
-    await push(productRef, { productName, stock, price });
+    const newProduct = {
+      productId,
+      stock,
+      price,
+    };
+    await push(productRef, newProduct);
     alert('Producto agregado correctamente');
   };
 
@@ -17,8 +22,8 @@ export default function NewProduct() {
     <div>
       <h1>Agregar Nuevo Producto</h1>
       <div>
-        <label>Nombre del Producto:</label>
-        <input type="text" value={productName} onChange={(e) => setProductName(e.target.value)} />
+        <label>ID del Producto:</label>
+        <input type="text" value={productId} onChange={(e) => setProductId(e.target.value)} />
       </div>
       <div>
         <label>Stock:</label>
